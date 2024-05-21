@@ -13,6 +13,8 @@
 		CEDB4A6B2BFA50E600C75BCE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CEDB4A6A2BFA50E600C75BCE /* Base */; };
 		CEDB4A6D2BFA50E700C75BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDB4A6C2BFA50E700C75BCE /* Assets.xcassets */; };
 		CEDB4A702BFA50E700C75BCE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CEDB4A6F2BFA50E700C75BCE /* Base */; };
+		CEDB4A7A2BFA57AF00C75BCE /* newWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4A792BFA57AF00C75BCE /* newWordViewController.swift */; };
+		CEDB4A7C2BFA70C700C75BCE /* emotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4A7B2BFA70C700C75BCE /* emotionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CEDB4A6C2BFA50E700C75BCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDB4A6F2BFA50E700C75BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDB4A712BFA50E700C75BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDB4A792BFA57AF00C75BCE /* newWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newWordViewController.swift; sourceTree = "<group>"; };
+		CEDB4A7B2BFA70C700C75BCE /* emotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emotionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		CEDB4A622BFA50E600C75BCE /* SeSAC-Assignment-4 */ = {
 			isa = PBXGroup;
 			children = (
+				CEDB4A782BFA577200C75BCE /* Codes */,
 				CEDB4A632BFA50E600C75BCE /* AppDelegate.swift */,
 				CEDB4A652BFA50E600C75BCE /* SceneDelegate.swift */,
 				CEDB4A672BFA50E600C75BCE /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				CEDB4A712BFA50E700C75BCE /* Info.plist */,
 			);
 			path = "SeSAC-Assignment-4";
+			sourceTree = "<group>";
+		};
+		CEDB4A782BFA577200C75BCE /* Codes */ = {
+			isa = PBXGroup;
+			children = (
+				CEDB4A792BFA57AF00C75BCE /* newWordViewController.swift */,
+				CEDB4A7B2BFA70C700C75BCE /* emotionViewController.swift */,
+			);
+			path = Codes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDB4A682BFA50E600C75BCE /* ViewController.swift in Sources */,
+				CEDB4A7C2BFA70C700C75BCE /* emotionViewController.swift in Sources */,
 				CEDB4A642BFA50E600C75BCE /* AppDelegate.swift in Sources */,
 				CEDB4A662BFA50E600C75BCE /* SceneDelegate.swift in Sources */,
+				CEDB4A7A2BFA57AF00C75BCE /* newWordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
