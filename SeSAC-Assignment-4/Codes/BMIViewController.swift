@@ -34,6 +34,12 @@ class BMIViewController: UIViewController {
         configureTextField(heightField)
         configureTextField(weightField)
         
+        let height = UserDefaults.standard.integer(forKey: "heightInfo")
+        let weight = UserDefaults.standard.integer(forKey: "weightInfo")
+        heightField.text = "\(height)"
+        weightField.text = "\(weight)"
+        
+        
         resultButton.backgroundColor = .purple
         resultButton.layer.cornerRadius = 15
         resultButton.setTitle("결과 확인", for: .normal)
@@ -59,38 +65,59 @@ class BMIViewController: UIViewController {
     
     @IBAction func randomButtonClicked(_ sender: UIButton) {
         
-        let randomHeight = Int.random(in: 140...220)
-        let randomWeight = Int.random(in: 40...160)
+        let randomHeight = Int.random(in: 130...230)
+        let randomWeight = Int.random(in: 30...200)
         
         heightField.text = "\(randomHeight)"
         weightField.text = "\(randomWeight)"
     }
     
+    func showAlert(title: String?, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(ok)
+        present(alert, animated: true)
+    }
+
     @IBAction func resultButtonClicked(_ sender: UIButton) {
         
-        let height = (Float(heightField.text!) ?? 0) / 100
-        let weight = Float(weightField.text!) ?? 0
+        var alertMsg: String?
+        var result = ""
         
-        let BMI: Float = weight / (height * height)
+        guard let heightText = heightField.text, var height = Float(heightText),
+              let weightText = weightField.text, var weight = Float(weightText) else {
+                alertMsg = "키 및 몸무게를 입력하십시오"
+                showAlert(title: alertMsg, message: result)
+                return
+            }
         
-        var result: String
-        print(BMI)
-        
-        switch (BMI) {
-        case ...18.4: result = "Underweight"
-        case 18.5...24.9: result = "Normal"
-        case 25.0...39.9: result = "Overweight"
-        case 40.0...: result = "Obese"
-        default: result = "Error"
+
+        if height > 230 || height < 130 || weight > 200 || weight < 30 {
+            alertMsg = "내용 확인 후 다시 입력하십시오"
+            
+            
+        }
+        else
+        {
+            
+            height = height / 100
+            let BMI = weight / (height * height)
+            alertMsg = "BMI 점수: \(BMI)"
+            
+            switch (BMI) {
+            case ...18.4: result = "Underweight"
+            case 18.5...24.9: result = "Normal"
+            case 25.0...39.9: result = "Overweight"
+            case 40.0...: result = "Obese"
+            default: result = "Error"
+            }
         }
         
-        let alert = UIAlertController(title: "BMI score: \(BMI)", message: "\(result)", preferredStyle: .actionSheet)
+        showAlert(title: alertMsg, message: result)
         
-        let ok = UIAlertAction(title: "OK", style: .cancel)
+        UserDefaults.standard.set(heightField.text, forKey: "heightInfo")
+        UserDefaults.standard.set(weightField.text, forKey: "weightInfo")
         
-        alert.addAction(ok)
-        
-        present(alert, animated: true)
     }
     
 }

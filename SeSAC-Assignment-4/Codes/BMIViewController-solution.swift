@@ -19,12 +19,25 @@ class BMIViewController_solution: UIViewController {
 
     }
     
+    
+    
+    func checkButtonClicked() {
+        
+        let height = heightTextField.text
+        guard height!.count > 3
+        else {
+            resultLabel.text = "3자리 이상 입력해주세요"
+            return
+        }
+    }
+    
     func checkButtonController() {
         // height의 범위기 제한적
         if let height = heightTextField.text,
            let weight = weightTextField.text {
             let result = "키 \(height), 몸무게 \(weight)"
             
+            resultLabel.text = result
             //guard
             //2. 변수 활용 범위
             //3. early exit

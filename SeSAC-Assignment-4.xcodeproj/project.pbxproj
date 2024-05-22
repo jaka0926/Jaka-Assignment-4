@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CEB87B882BFD81110043C7F3 /* BMIViewController-solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB87B872BFD81110043C7F3 /* BMIViewController-solution.swift */; };
+		CEB87B8B2BFD90600043C7F3 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CEB87B8A2BFD90600043C7F3 /* FSCalendar */; };
+		CEB87B8E2BFD90B70043C7F3 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = CEB87B8D2BFD90B70043C7F3 /* TextFieldEffects */; };
+		CEB87B912BFD90E30043C7F3 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = CEB87B902BFD90E30043C7F3 /* Toast */; };
 		CECFEA9C2BFC9AF900922B50 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFEA9B2BFC9AF900922B50 /* BMIViewController.swift */; };
 		CEDB4A642BFA50E600C75BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4A632BFA50E600C75BCE /* AppDelegate.swift */; };
 		CEDB4A662BFA50E600C75BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4A652BFA50E600C75BCE /* SceneDelegate.swift */; };
@@ -39,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB87B912BFD90E30043C7F3 /* Toast in Frameworks */,
+				CEB87B8B2BFD90600043C7F3 /* FSCalendar in Frameworks */,
+				CEB87B8E2BFD90B70043C7F3 /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +109,11 @@
 			dependencies = (
 			);
 			name = "SeSAC-Assignment-4";
+			packageProductDependencies = (
+				CEB87B8A2BFD90600043C7F3 /* FSCalendar */,
+				CEB87B8D2BFD90B70043C7F3 /* TextFieldEffects */,
+				CEB87B902BFD90E30043C7F3 /* Toast */,
+			);
 			productName = "SeSAC-Assignment-4";
 			productReference = CEDB4A602BFA50E600C75BCE /* SeSAC-Assignment-4.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +142,11 @@
 				Base,
 			);
 			mainGroup = CEDB4A572BFA50E600C75BCE;
+			packageReferences = (
+				CEB87B892BFD90600043C7F3 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				CEB87B8C2BFD90B70043C7F3 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+				CEB87B8F2BFD90E30043C7F3 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = CEDB4A612BFA50E600C75BCE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -387,6 +403,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEB87B892BFD90600043C7F3 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+		CEB87B8C2BFD90B70043C7F3 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+		CEB87B8F2BFD90E30043C7F3 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEB87B8A2BFD90600043C7F3 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB87B892BFD90600043C7F3 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+		CEB87B8D2BFD90B70043C7F3 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB87B8C2BFD90B70043C7F3 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+		CEB87B902BFD90E30043C7F3 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB87B8F2BFD90E30043C7F3 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEDB4A582BFA50E600C75BCE /* Project object */;
 }
