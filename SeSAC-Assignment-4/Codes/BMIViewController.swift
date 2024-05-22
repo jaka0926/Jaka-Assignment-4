@@ -45,6 +45,9 @@ class BMIViewController: UIViewController {
         
     }
     
+    @IBAction func keyboardDismiss (_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
     func configureTextField(_ textField: UITextField) {
         textField.layer.borderWidth = 1
