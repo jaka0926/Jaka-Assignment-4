@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CECFEA9C2BFC9AF900922B50 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFEA9B2BFC9AF900922B50 /* BMIViewController.swift */; };
 		CEDB4A642BFA50E600C75BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4A632BFA50E600C75BCE /* AppDelegate.swift */; };
 		CEDB4A662BFA50E600C75BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4A652BFA50E600C75BCE /* SceneDelegate.swift */; };
 		CEDB4A682BFA50E600C75BCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB4A672BFA50E600C75BCE /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CECFEA9B2BFC9AF900922B50 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
 		CEDB4A602BFA50E600C75BCE /* SeSAC-Assignment-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSAC-Assignment-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDB4A632BFA50E600C75BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDB4A652BFA50E600C75BCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				CEDB4A792BFA57AF00C75BCE /* newWordViewController.swift */,
 				CEDB4A7B2BFA70C700C75BCE /* emotionViewController.swift */,
+				CECFEA9B2BFC9AF900922B50 /* BMIViewController.swift */,
 			);
 			path = Codes;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDB4A682BFA50E600C75BCE /* ViewController.swift in Sources */,
+				CECFEA9C2BFC9AF900922B50 /* BMIViewController.swift in Sources */,
 				CEDB4A7C2BFA70C700C75BCE /* emotionViewController.swift in Sources */,
 				CEDB4A642BFA50E600C75BCE /* AppDelegate.swift in Sources */,
 				CEDB4A662BFA50E600C75BCE /* SceneDelegate.swift in Sources */,
