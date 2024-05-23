@@ -14,6 +14,7 @@
 		CE504E772BFF06BF00C82DCB /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE504E762BFF06BF00C82DCB /* Search.storyboard */; };
 		CE504E792BFF07D300C82DCB /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE504E782BFF07D300C82DCB /* Todo.storyboard */; };
 		CE504E7B2BFF162800C82DCB /* SimpleTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE504E7A2BFF162800C82DCB /* SimpleTableTableViewController.swift */; };
+		CE567C272BFF4EF000559F65 /* AssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE567C262BFF4EF000559F65 /* AssignmentTableViewController.swift */; };
 		CEB87B882BFD81110043C7F3 /* BMIViewController-solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB87B872BFD81110043C7F3 /* BMIViewController-solution.swift */; };
 		CEB87B8B2BFD90600043C7F3 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CEB87B8A2BFD90600043C7F3 /* FSCalendar */; };
 		CEB87B8E2BFD90B70043C7F3 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = CEB87B8D2BFD90B70043C7F3 /* TextFieldEffects */; };
@@ -37,6 +38,7 @@
 		CE504E762BFF06BF00C82DCB /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		CE504E782BFF07D300C82DCB /* Todo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
 		CE504E7A2BFF162800C82DCB /* SimpleTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableTableViewController.swift; sourceTree = "<group>"; };
+		CE567C262BFF4EF000559F65 /* AssignmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewController.swift; sourceTree = "<group>"; };
 		CEB87B872BFD81110043C7F3 /* BMIViewController-solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMIViewController-solution.swift"; sourceTree = "<group>"; };
 		CECFEA9B2BFC9AF900922B50 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
 		CEDB4A602BFA50E600C75BCE /* SeSAC-Assignment-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSAC-Assignment-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 				CE504E702BFEEB2700C82DCB /* ModalViewController-solution.swift */,
 				CE504E722BFEEB3600C82DCB /* ShowViewController-solution.swift */,
 				CE504E7A2BFF162800C82DCB /* SimpleTableTableViewController.swift */,
+				CE567C262BFF4EF000559F65 /* AssignmentTableViewController.swift */,
 			);
 			path = Codes;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				CE504E6D2BFECDBF00C82DCB /* emotionViewController-solution.swift in Sources */,
 				CEDB4A7C2BFA70C700C75BCE /* emotionViewController.swift in Sources */,
 				CEDB4A642BFA50E600C75BCE /* AppDelegate.swift in Sources */,
+				CE567C272BFF4EF000559F65 /* AssignmentTableViewController.swift in Sources */,
 				CEDB4A662BFA50E600C75BCE /* SceneDelegate.swift in Sources */,
 				CEDB4A7A2BFA57AF00C75BCE /* newWordViewController.swift in Sources */,
 			);
