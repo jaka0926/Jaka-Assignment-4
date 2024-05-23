@@ -30,14 +30,21 @@ class emotionViewController: UIViewController {
     @IBOutlet var label8: UILabel!
     @IBOutlet var label9: UILabel!
     
+    @IBOutlet var resetButton: UIButton!
     
     var labelNum = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     var labelArr = ["행복해", "사랑해", "좋아해", "당황헤", "속상해", "우울해", "심심해", "불안해", "슬퍼해"]
-
+    
+    var imageArr = ["slime1", "slime2", "slime3", "slime4", "slime5", "slime6", "slime7", "slime8", "slime9"]
+    
+    let saveList = ["label1", "label2", "label3", "label4", "label5", "label6", "label7", "label8", "label9"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         let saved1 = UserDefaults.standard.integer(forKey: "label1")
         let saved2 = UserDefaults.standard.integer(forKey: "label2")
         let saved3 = UserDefaults.standard.integer(forKey: "label3")
@@ -47,6 +54,7 @@ class emotionViewController: UIViewController {
         let saved7 = UserDefaults.standard.integer(forKey: "label7")
         let saved8 = UserDefaults.standard.integer(forKey: "label8")
         let saved9 = UserDefaults.standard.integer(forKey: "label9")
+        
         
         labelNum[0] = saved1
         labelNum[1] = saved2
@@ -58,100 +66,50 @@ class emotionViewController: UIViewController {
         labelNum[7] = saved8
         labelNum[8] = saved9
         
-        deleteButtonTitle(image1)
-        deleteButtonTitle(image2)
-        deleteButtonTitle(image3)
-        deleteButtonTitle(image4)
-        deleteButtonTitle(image5)
-        deleteButtonTitle(image6)
-        deleteButtonTitle(image7)
-        deleteButtonTitle(image8)
-        deleteButtonTitle(image9)
-        
-        setLabelprops(label1)
-        setLabelprops(label2)
-        setLabelprops(label3)
-        setLabelprops(label4)
-        setLabelprops(label5)
-        setLabelprops(label6)
-        setLabelprops(label7)
-        setLabelprops(label8)
-        setLabelprops(label9)
+        imageConfig()
+        labelConfig()
         
         
+        
+        resetButton.setTitle("Reset", for: .normal)
+        resetButton.setTitleColor(.white, for: .normal)
     }
     
-    
-    
-    
-    func deleteButtonTitle(_ image: UIButton) {
-        image.setTitle("", for: .normal)
+    func imageConfig() {
+        
+        let temp = [image1, image2, image3, image4, image5, image6, image7, image8, image9]
+        
+        for li in temp {
+            li!.setImage(UIImage(named: imageArr[li!.tag]), for: .normal)
+            
+        }
     }
     
-    func setLabelprops(_ label: UILabel) {
-        label.textAlignment = .center
-        label.textColor = .white
-        label.text = labelArr[label.tag] + " \(labelNum[label.tag])"
+    func labelConfig() {
+        let list = [label1, label2, label3, label4, label5, label6, label7, label8, label9]
+        for li in list {
+            li!.textAlignment = .center
+            li!.textColor = .white
+            li!.text = labelArr[li!.tag] + " \(labelNum[li!.tag])"}
     }
     
-    @IBAction func Image1clicked(_ sender: UIButton) {
+    @IBAction func ImageButtonClicked(_ sender: UIButton) {
+        
+        let list = [label1, label2, label3, label4, label5, label6, label7, label8, label9]
+        
         labelNum[sender.tag] += 1
-        label1.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label1")
+        list[sender.tag]!.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
+        UserDefaults.standard.set(labelNum[sender.tag], forKey: saveList[sender.tag])
     }
-    
-    @IBAction func Image2clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label2.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label2")
-    }
-    @IBAction func Image3clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label3.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label3")
-    }
-    @IBAction func Image4clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label4.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label4")
-    }
-    @IBAction func Image5clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label5.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label5")
-    }
-    @IBAction func Image6clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label6.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label6")
-    }
-    @IBAction func Image7clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label7.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label7")
-    }
-    @IBAction func Image8clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label8.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label8")
-    }
-    @IBAction func Image9clicked(_ sender: UIButton) {
-        labelNum[sender.tag] += 1
-        label9.text = labelArr[sender.tag] + " \(labelNum[sender.tag])"
-        UserDefaults.standard.set(labelNum[sender.tag], forKey: "label9")
-    }
-    
     
     @IBAction func resetButton(_ sender: UIButton) {
+        
         labelNum = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-        setLabelprops(label1)
-        setLabelprops(label2)
-        setLabelprops(label3)
-        setLabelprops(label4)
-        setLabelprops(label5)
-        setLabelprops(label6)
-        setLabelprops(label7)
-        setLabelprops(label8)
-        setLabelprops(label9)
+        labelConfig()
+        
+        for element in saveList {
+            UserDefaults.standard.setValue(0, forKey: element)
+            print(element)
+        }
     }
 }
